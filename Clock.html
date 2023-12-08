@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+		<link rel="stylesheet" href="./clock/style.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+					},
+				},
+			};
+		</script>
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+	</head>
+	<body>
+		<!--clock-->
+		<div class="min-h-screen flex justify-center items-center" id="hourested">
+			<div
+				class="asosoy w-[500px] h-[500px] bg-white-500 rounded-50% relative border-solid border-8 border-green-500 rounded-full"
+			>
+				<div
+					class="w-[10px] h-[45%] absolute bottom-[50%] left-[50%] bg-red-600 rounded-t-xl fixed origin-bottom"
+					id="mill"
+				></div>
+				<div
+					class="w-[11px] h-[38%] absolute bottom-[50%] left-[50%] bg-blue-600 rounded-t-xl border-solid border-3 border-red-500 origin-bottom"
+					id="min"
+				></div>
+				<div
+					class="w-[14px] h-[25%] absolute bottom-[50%] left-[50%] bg-green-600 rounded-t-xl border-solid border-3 border-red-500 origin-bottom"
+					id="hour"
+				></div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[30deg]">1</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[60deg]">2</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[90deg]">3</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[120deg]">4</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[150deg]">5</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[180deg]">6</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[210deg]">7</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[240deg]">8</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[270deg]">9</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[300deg]">10</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center rotate-[330deg]">11</div>
+				<div class="w-full h-full raqam absolute text-3xl text-green-400 text-center ratate-[0deg]">12</div>
+				<!--timer===========-->
+			</div>
+		</div>
+
+		<!--timer=====-->
+
+		<!-- <p class="text-5xl">&#128526;</p> -->
+
+		<!--clock them=================-->
+		<div class="w-full text-center flex justify-center items-center gap-2 hidden">
+			<button class="text-white text-2xl">clock them</button>
+			<i class="bi bi-list text-white flex text-2xl cursor-pointer" id="bi"></i>
+			<i class="bi bi-x text-white text-3xl hidden" id="bi2"></i>
+		</div>
+		<div class="hidden" id="list">
+			<div class="w-full text-center flex items-center flex-col">
+				<div class="w-[150px] h-[107px] bg-gray-400 flex flex-col rounded-t-xl" cursor-pointer>
+					<p class="text-white text-2xl">clock</p>
+					<p class="text-white text-2xl cursor-pointer" id="time">time</p>
+					<p class="text-white text-2xl">timer</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="./java/clock.js"></script>
+	</body>
+</html>
